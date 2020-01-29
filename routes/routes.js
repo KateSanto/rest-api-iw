@@ -1,16 +1,17 @@
 const countryRoutes = require('./countries');
 
-const appRouter = (app, fs) => {
+const appRouter = (app) => {
     app.get('/', (req, res) => {
         res.send('welcome to the development api-server');
     });
 
-    app.get('/AL', (req, res) => {
-        res.send('single country');
+    // app.get('/AL', (req, res) => {
+    //     res.send('single country');
 
-    });
+    // });
 
-    countryRoutes(app, fs);
+    countryRoutes(app);
 };
 
 module.exports = appRouter;
+module.exports = countryRoutes;
